@@ -4,27 +4,124 @@
     box-sizing: border-box;
 }
 header {
-    width: 1920px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3) ;
 }
-.div__header{
-    width: 583px;
-    height: 59px;
+.header__nav{
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    width: 100%;
+}
+.container__1{
+    width: 1113px;
+    height: 100px;
 }
 .ul__header{
-    display:flex;
+    display: flex;
     justify-content: flex-end;
+    align-items: center;
     list-style: none;
-    gap: 20px;
-    text-align:center;
-    height: 100%;
+    gap: 30px;
+    height: 100px;
 }
 .ul__header li {
     cursor: pointer;
     font-family: sans-serif;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    padding: 10px 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.ul__header li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px; 
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0); 
+    transition: transform 0.3s ease; 
+    z-index: 11;
+}
+.ul__header li:hover::after {
+    transform: scaleX(1); /* Показываем линию при наведении */
 }
 
-/* main */
-.container {
+/*main*/
+ .hero {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.banner img {
+    object-fit: cover;
+    display: block;
+}
+.banner__text {
+    max-width: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+}
+.banner__text span {
+    width: 175px;
+    height: 6px;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+}
+.banner__text h1{
+    color: white;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+.banner__text button {
+    background:#3b82f6;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: 500;
+    color:white;
+    border: none;
+    padding: 15px 40px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+} 
+
+
+
+
+
+
+
+
+
+
+/*.container {
     width: 1113px;
     position: relative;
 }
@@ -108,7 +205,7 @@ header {
 }
 
 /* main projects */
-.container__second {
+/* /* .container__second {
     max-width: 1100px;
     display: flex;
     justify-content: center;
@@ -146,9 +243,9 @@ header {
 .project__card img {
     /* При ширине контейнера 1100px, 4 картинки по 255px + gap 30px 
        как раз идеально помещаются в ряд (255*4 + 30*3 = 1110px) */
-    width: 255px;
-    height: 255px;
-    border-radius: 10px;
+    /* width: 255px;
+    height: 255px; */ 
+    /* border-radius: 10px;
     object-fit: cover;
 }
 
@@ -166,4 +263,4 @@ header {
     background-color: #4985FF;
     color:#FFFFFF;
     border: none;
-}
+} */ 
