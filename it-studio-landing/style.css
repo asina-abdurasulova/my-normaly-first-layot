@@ -3,25 +3,36 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: 'Montserrat', sans-serif; 
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
 header {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3) ;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-.header__nav{
+
+.header__nav {
     display: flex;
     justify-content: center;
     background-color: transparent;
     width: 100%;
 }
-.container__1{
+
+.container__1 {
     width: 1113px;
     height: 100px;
+    padding: 0 15px;
 }
-.ul__header{
+
+.ul__header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -29,9 +40,9 @@ header {
     gap: 30px;
     height: 100px;
 }
+
 .ul__header li {
     cursor: pointer;
-    font-family: sans-serif;
     color: white;
     font-size: 16px;
     font-weight: 500;
@@ -41,6 +52,7 @@ header {
     display: flex;
     align-items: center;
 }
+
 .ul__header li::after {
     content: '';
     position: absolute;
@@ -53,27 +65,30 @@ header {
     transition: transform 0.3s ease; 
     z-index: 11;
 }
-.ul__header li:hover::after {
-    transform: scaleX(1); /* Показываем линию при наведении */
-}
 
-/*main*/
- .hero {
+.ul__header li:hover::after {
+    transform: scaleX(1); 
+}
+.hero {
     width: 100%;
     height: 100vh;
     overflow: hidden;
 }
+
 .banner {
     position: relative;
     width: 100%;
     height: 100vh;
 }
+
 .banner img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
+
 .banner__text {
-    max-width: 900px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -85,182 +100,318 @@ header {
     gap: 20px;
     width: 100%;
     max-width: 900px;
+    padding: 0 15px;
 }
+
 .banner__text span {
-    width: 175px;
-    height: 6px;
     color: white;
     font-weight: 500;
     font-size: 16px;
 }
-.banner__text h1{
+
+.banner__text h1 {
     color: white;
     font-size: 48px;
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 30px;
 }
+
 .banner__text button {
-    background:#3b82f6;
+    background: #3b82f6;
     border-radius: 30px;
     font-size: 17px;
     font-weight: 500;
-    color:white;
+    color: white;
     border: none;
     padding: 15px 40px;
     cursor: pointer;
     transition: background 0.3s ease;
 } 
 
-
-
-
-
-
-
-
-
-
-/*.container {
-    width: 1113px;
-    position: relative;
+.banner__text button:hover {
+    background: #2563eb;
 }
-.works__top {
+
+.services {
+    width: 100%;
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.services__container {
     display: flex;
-    justify-content: space-between;
-    align-items:center;
-    
+    flex-direction: column;
+    align-items: center; 
+    max-width: 1113px; 
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
 }
-.works__top h2 {
-    color:white;
+
+.services__container h2 {
+    color: #323232;
     font-size: 36px;
     font-weight: 700;
-    display: flex;
-    width: 540px;
-    height: 88px;
-    font-family: Montserrat;
-    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 20px;
 }
+
+.services__desc {
+    color: #999999;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    max-width: 730px;
+    margin-bottom: 50px;
+}
+
+.services__row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 50px;
+    gap: 30px;
+}
+
+.website {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1;
+}
+
+.icon__website {
+    flex-shrink: 0;
+}
+
+.icon__website img {
+    display: block;
+    width: 60px;
+    height: auto;
+}
+
+.website__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.website h4 { 
+    color: #000000;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.website p {
+    color: #999999;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.services button.services__btn {
+    background: #4985FF;
+    width: 200px;
+    height: 45px;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.services button.services__btn:hover {
+    background: #3570e8;
+}
+
 .works {
     display: flex;
     padding-top: 100px;
     background: #5F12D0;
     justify-content: center;
     padding-bottom: 250px;
-
+    width: 100%;
 }
+
+.container {
+    width: 1113px;
+    position: relative;
+    padding: 0 15px;
+}
+
+.works__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.works__top h2 {
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    width: 540px;
+    line-height: 1.2;
+}
+
 .works__top button {
     width: 200px;
     height: 45px;
     color: white;
     font-size: 16px;
     font-weight: 500;
-    font-family: Montserrat;
     text-align: center;
     background: #4985FF;
     border-radius: 30px;
     border: none;
-    
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
+
+.works__top button:hover {
+    background: #3570e8;
+}
+
 .cards {
     display: flex;
     justify-content: space-between;
     width: 100%;
     position: absolute;
-    top: 250px;
+    top: 220px;
     left: 0;
     z-index: 10;
+    padding: 0 15px;
+    gap: 20px;
 }
 
 .card {
-    width: 350px;
+    flex: 1;
+    max-width: 350px;
     background: white;
     border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
+
 .card img {
-    width: 350px;
-    height: 300px;
+    width: 100%;
+    height: auto;
     border-radius: 10px;
+    display: block;
+    margin-bottom: 20px;
 }
+
 .card h3 {
     color: black;
     font-weight: 600;
     font-size: 18px; 
-    margin: 30px 0;
+    margin-bottom: 15px;
 }
-.card span {
-    color:#4985FF;
+
+.card h3 span {
+    color: #4985FF;
     font-weight: 600;
     font-size: 18px;
+    margin-right: 5px;
 }
+
 .card p {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     color: #999999;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
+
 .card a {
     color: #4985FF;
     text-decoration: underline;
+    font-weight: 500;
 }
 
-/* main projects */
-/* /* .container__second {
-    max-width: 1100px;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-}
 .projects {
     padding: 450px 0 100px 0;
     background: #F6F6F8;
+    width: 100%;
 }
+
+.container__second {
+    max-width: 1113px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 .our__projects {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center  ;
+    text-align: center;
+    width: 100%;
 }
+
 .our__projects h2 {  
     font-weight: 700;
     font-size: 36px;
-    text-align: center;
     margin-bottom: 30px;
+    color: #323232;
 }
+
 .our__projects p {
     max-width: 730px;
     color: #999999;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    font-size: 16px;
 }
+
 .project__card {
     display: flex;
-    gap: 30px;
-    justify-content: center;
+    gap: 20px;
+    justify-content: space-between;
     width: 100%;
-    height: auto ;
     margin-bottom: 50px;
-}
-.project__card img {
-    /* При ширине контейнера 1100px, 4 картинки по 255px + gap 30px 
-       как раз идеально помещаются в ряд (255*4 + 30*3 = 1110px) */
-    /* width: 255px;
-    height: 255px; */ 
-    /* border-radius: 10px;
-    object-fit: cover;
 }
 
 .project__card img {
+    flex: 1;
     width: 255px;
-    height: 255px;
+    height: 255px;  
     border-radius: 10px;
     object-fit: cover;
 }
+
 .our__projects button {
     width: 200px;
     height: 45px;
     text-align: center;
     border-radius: 30px;
     background-color: #4985FF;
-    color:#FFFFFF;
+    color: #FFFFFF;
     border: none;
-} */ 
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+} 
+
+.our__projects button:hover {
+    background: #3570e8;
+}
+
+footer {
+    width: 100%;
+    background-color: #222;
+    height: 100px;
+}
